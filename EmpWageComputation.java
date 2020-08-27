@@ -6,7 +6,7 @@ class EmpWageComputation {
 	public static final int workDayPerMonth = 20; 
 	public static final int workHourPerMonth = 100; 
 
-	public static void main(String[] args) {
+	public void computeWage() {
 	
 		int workHour = 0;
 		int totalWorkHour = 0;
@@ -36,5 +36,10 @@ class EmpWageComputation {
 		}
 		int monthWage = wagePerHour * totalWorkHour;
 		System.out.println("Total wage of month is: "+monthWage);
+	}
+	public static void main(String[] args) {
+	
+		EmpWageComputation obj = new EmpWageComputation();
+		obj.computeWage();
 	}
 }
