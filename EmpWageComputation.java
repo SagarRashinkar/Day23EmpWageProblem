@@ -3,11 +3,10 @@ class EmpWageComputation {
 	public static final int isFullTime = 1;
 	public static final int isPartTime = 2;
 	public static final int wagePerHour = 20;
-	public static final int workDayPerMonth = 20; 
-	public static final int workHourPerMonth = 100; 
 
-	public void computeWage() {
+	public void computeWage(String compName, int workDayPerMonth, int workHourPerMonth) {
 	
+		System.out.println("Daily wage for company "+compName+" is:");
 		int workHour = 0;
 		int totalWorkHour = 0;
 		int dailyWage = 0;
@@ -35,11 +34,13 @@ class EmpWageComputation {
 			System.out.println("wage of day "+totalWorkDay+" is: "+dailyWage);
 		}
 		int monthWage = wagePerHour * totalWorkHour;
-		System.out.println("Total wage of month is: "+monthWage);
+		System.out.println("Total wage of company "+compName+" is:"+monthWage);
 	}
 	public static void main(String[] args) {
 	
 		EmpWageComputation obj = new EmpWageComputation();
-		obj.computeWage();
+		obj.computeWage("Reliance",20,80);
+		obj.computeWage("D-mart",25,100);
+		obj.computeWage("FlipKart",25,65);
 	}
 }
