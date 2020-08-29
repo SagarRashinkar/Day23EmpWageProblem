@@ -29,12 +29,10 @@ class EmpWageComputation {
 					workHour = 0;
 					break;
 			}
-			totalWorkHour += workHour;
+		
 			dailyWage = workHour * wagePerHour;
-			System.out.println("wage of day "+totalWorkDay+" is: "+dailyWage);
+			System.out.println("Emp wage of day "+totalWorkDay+" is: "+dailyWage);
 		}
-		int monthWage = wagePerHour * totalWorkHour;
-		System.out.println("Total wage of company "+compName+" is:"+monthWage);
 	}
 	public static void main(String[] args) {
 	
